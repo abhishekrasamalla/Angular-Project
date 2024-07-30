@@ -1,0 +1,7 @@
+<!-- src/app/people-list/people-list.component.html -->
+<h2>People List</h2>
+<ol>
+  <li *ngFor="let person of people">
+    {{ person.name }} - <a [routerLink]="['/edit', person.id]">Edit</a> - <a [routerLink]="['/delete', person.id]">Delete</a>
+  </li>
+</ol>

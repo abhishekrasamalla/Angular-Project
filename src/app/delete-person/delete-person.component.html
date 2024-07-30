@@ -1,0 +1,7 @@
+<!-- src/app/delete-person/delete-person.component.html -->
+<h2>Delete Person</h2>
+<div *ngIf="person">
+  <p>Are you sure you want to delete {{ person.name }}?</p>
+  <button (click)="delete()">Yes</button>
+  <button (click)="cancel()">No</button>
+</div>

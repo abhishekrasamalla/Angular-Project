@@ -1,0 +1,19 @@
+<!-- src/app/edit-person/edit-person.component.html -->
+<h2>Edit Person</h2>
+<div *ngIf="person">
+  <!--*ngIf - It conditionally includes or excludes an element from the DOM based on the truthiness of the expression provided.-->
+  <label>Name: <br /><input [(ngModel)]="person.name" /></label><br />
+  <label>Age: <br /><input [(ngModel)]="person.age" type="number" /></label><br />
+  <label>Gender:<br /> 
+    <select [(ngModel)]="person.gender">
+      <!--The [(ngModel)] directive is used for two-way data binding. 
+        It binds the value of the input field to the person.name property and updates the property when the user modifies the input field.-->
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </label><br />
+
+  <label>Country:<br /> <input [(ngModel)]="person.country"/></label><br />
+
+  <button (click)="save()">Save</button>
+</div>
